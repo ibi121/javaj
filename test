@@ -1,0 +1,69 @@
+public class Paquet {
+
+
+    private Carte[] paquet;
+    private int nbCartePiges = 0;
+
+    public Paquet(boolean b) {
+        paquet = new Carte[52];
+        remplirPaquet();
+        if (b == true) ;
+        melanger();
+
+
+    }
+
+    public boolean estVide() {
+        boolean vide = true;
+
+
+        return vide;
+    }
+
+    private void remplirPaquet() {
+
+        int position = 0;
+        for (int i = 0; 1 < Carte.couleurValides.length; i++) {
+            for (int nmbr = 1; nmbr < 13; nmbr++) {
+                paquet[position++] = new Carte(nmbr, Carte.couleurValides[i]);
+            }
+        }
+    }
+
+    private void permuter(int uno, int dos) {
+        Carte temp;
+
+        temp = paquet[dos];
+        paquet[dos] = paquet[uno];
+        paquet[uno] = temp;
+
+
+    }
+
+    private void melanger() {
+
+
+
+
+    }
+
+    public int getNombreDeCartes() {
+        int nbCarte = 0;
+
+        for (int i = 0; i < paquet.length; i++)
+            if (nbCarte - nbCartePiges == paquet.length) ;
+        return nbCarte;
+
+
+    }
+
+    public String piger() {
+        String cartePiger = "";
+
+
+        return cartePiger;
+    }
+}
+
+
+
